@@ -1,0 +1,219 @@
+---
+---
+// Overall
+body
+  font-family: auto
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  background-color: #ddd
+
+a
+  color: #3cf
+
+a:hover
+  text-decoration: underline
+
+a:active
+  text-decoration: underline
+
+main
+  flex: 1 0 auto
+
+// PC condition
+header,
+main,
+footer
+  padding-left: 300px
+
+.container
+  width: 90%
+
+// Menu button
+a
+  &.button-collapse
+    &.top-nav
+      // outline: 1px solid lime
+      position: absolute
+      float: none
+      color: #fff
+      font-size: 36px
+      line-height: 80px
+      text-align: center
+      height: 48px
+      width: 48px
+      top: 1rem
+      z-index: 999
+
+// Header
+header
+  height: 200px
+
+  a:hover
+    text-decoration: none
+
+  .userView
+    background-image: url(/assets/res/bg.png)
+    background-size:contain
+    background-repeat: no-repeat
+
+  .circle
+    border-style: solid
+    border-color: #009688
+    border-width: 3px
+
+nav 
+  &.top-nav
+    height: 140%
+    background: -webkit-linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
+    background: linear-gradient(90deg, #3AA17E 10%, #00537E 90%)
+
+  .page-title
+    display: inline-block
+    font-size: 36px
+    font-weight: bold
+    line-height: 80px
+    margin-top: 1em
+
+  .head-message
+    font-size: 32px
+    font-weight: bold
+    font-style: italic
+    line-height: 20px
+
+  .nav-wrapper
+    height: 60%
+
+    .container
+      position: relative
+
+      .github-btns
+        position: absolute
+        top: 0
+        width: 100%
+        text-align: right
+
+        iframe
+          width: 20%
+          margin: 0
+          padding: 0
+
+  .search
+    position: relative
+    height: 30px
+    text-align: right
+    line-height: 30px
+    padding-right: 10px
+
+    .search-icon
+      float: right
+      height: 100%
+      margin: 0 10px
+      line-height: 30px
+      cursor: pointer
+      user-select: none
+
+    .search-input
+      float: right
+      width: 30%
+      height: 30px
+      line-height: 30px
+      margin: 0
+      border: 2px solid #ddd
+      border-radius: 10px
+      box-sizing: border-box
+
+    .search-clear
+      display: none
+      
+    .search-results
+      display: block
+      z-index: 1000
+      position: absolute
+      top: 30px
+      right: 50px
+      width: 50%
+      max-height: 400px
+      overflow: auto
+      text-align: left
+      border-radius: 5px
+      background: #ccc
+      box-shadow: 0 .3rem .5rem #333
+
+      .result-item
+        background: aqua
+        color: black
+        margin: 5px
+        padding: 3px
+        border-radius: 3px
+        cursor: pointer
+
+// Main
+main
+  // opacity: .5
+  ul
+    &:not(.browser-default)
+      padding-left: 40px
+
+      li
+        list-style-type: disc
+
+// Footer
+footer.page-footer
+  margin-top: 10px
+
+  img
+    width: 48px
+    border: 3px solid silver
+    border-style: ridge
+
+  .row
+    margin-bottom: 0px
+
+  .footer-message
+    font-size: 20px
+    font-style: italic
+    font-weight: bold
+    color: #ddd
+
+  p
+    margin-top: 5px
+
+
+
+// Misc
+blockquote
+  border-left-color: teal
+
+// Tablet condition
+@media only screen and (max-width: 992px)
+  header,
+  main,
+  footer
+    padding-left: 0
+
+  nav 
+    .nav-wrapper
+      text-align: center
+
+// Phone condition
+@media only screen and (max-width: 600px)
+  nav
+    .page-title
+      font-size: 20px
+
+    .search
+      .search-input
+        width: 80%
+
+      .search-results
+        width: 80%
+
+    &.top-nav
+      .nav-wrapper
+        .container
+          .github-btns
+            text-align: center
+            
+            iframe
+              width: 30%

@@ -1,0 +1,107 @@
+</main>
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <img src="{{site.baseurl}}/assets/res/logo.png" alt="logo" />
+                <span class="footer-message">&nbsp;勤奋的程序猿，用心敲写明天</span>
+                <p>
+                    <span id="busuanzi_container_site_pv">访问量：<span id="busuanzi_value_site_pv"></span>次</span>&nbsp;
+                    <span id="busuanzi_container_site_pv">访客量：<span id="busuanzi_value_site_uv"></span>人次</span>
+                </p>
+                <p class="grey-text text-lighten-4">{{site.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &#xA9; {{"now" | date: "%Y"}} {{site.title}}. All rights reserved. Powered by <a href={{site.url}}>knightyun</a>.
+        </div>
+    </div>
+
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+{% for js in layout.js %}
+{% if js contains "//" %}
+<script src="{{js}}"></script>
+{% else %}
+<script src="{{site.baseurl}}/assets/js/{{js}}"></script>
+{% endif %}
+{% endfor %}
+{% for js in page.js %}
+{% if js contains "//" %}
+<script src="{{js}}"></script>
+{% else %}
+<script src="{{site.baseurl}}/assets/js/{{js}}"></script>
+{% endif %}
+{% endfor %}
+<!-- {% if site.google_tracking_id %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+    (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '{{site.google_tracking_id}}', 'auto');
+    ga('send', 'pageview');
+  </script>
+  {% endif %} -->
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
+
+<!-- Change top-nav background style -->
+<script src="{{site.baseurl}}/assets/js/change-bgcolor.js"></script>
+
+<!-- Search articles -->
+<script src="{{site.baseurl}}/assets/js/search.js"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?71e61d0c25aa13c0499c9a5ace61ad5d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+        (function () {
+            var src = (document.location.protocol == "http:") ?
+                "http://js.passport.qihucdn.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f" :
+                "https://jspassport.ssl.qhimg.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f";
+            document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+<!--熊掌号-->
+<script src="//msite.baidu.com/sdk/c.js?appid=1596010848630655"></script>
+<!--百度资源自动提交-->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<!--360 search-->
+<script>
+    (function () {
+        var src = (document.location.protocol == "http:") ?
+            "http://js.passport.qihucdn.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f" :
+            "https://jspassport.ssl.qhimg.com/11.0.1.js?9a9ed8ab4ddeae919346a010fbb8884f";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+</script>
+<!-- 不蒜子访问统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- LinkedIn -->
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</body>
+
+</html>

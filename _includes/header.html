@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="X2hsRcRCeh" />
+    <meta name="360-site-verification" content="fa6ca3a9a0330e9cecabee0a9fe1d52a" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <!--SOUGOU-->
+    <meta name="sogou_site_verification" content="oatSp9uAV5" />
+    <!--熊掌号 new-->
+    <meta name="baidu-site-verification" content="Wkb0Jzk8yx" />
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="IJrXvaK-Luj-lCGP7tymcCbkcfMKi82Y8V21qN9ZT0s" />
+    <title>
+        {% if page.title %}
+        {{ page.title | escape }}
+        {% else %}
+        {{ site.title | escape }}
+        {% endif %}
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/stylesheet.css">
+    {% for css in layout.css %}
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %}
+    {% endfor %}
+    {% for css in page.css %}
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %} 
+    {% endfor %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml">
+    {% seo title=false %}
+
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <div class="github-btns">
+                        <iframe src="https://ghbtns.com/github-btn.html?user=knightyun&repo=knightyun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=knightyun&repo=knightyun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=knightyun&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                    </div>
+                    <a class="page-title" href="{{site.baseurl}}/">{{site.title}}</a>
+                    <p class="head-message">学习&nbsp;&nbsp;总结&nbsp;&nbsp;分享&nbsp;&nbsp;提升</p>
+                </div>
+            </div>
+            <div class="search">
+                <i class="material-icons search-icon search-start">search</i>
+                <input type="text" class="search-input" placeholder="Searching..." />
+                <i class="material-icons search-icon search-clear">clear</i>
+                <div class="search-results"></div>
+            </div>
+        </nav>
+        <div class="container">
+            <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+        <ul id="slide-out" class="side-nav fixed" style="background-color:#ddd">
+            <li>
+                <div class="userView">
+                    <div class="background"></div>
+                    <a href="{{site.github_profile}}" target="_blank"><img class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png"></a>
+                    <span class="white-text name">{{site.user}}</span>
+                    <span class="white-text email">{{site.user_email}}</span>
+                </div>
+            </li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">home</i>Home - 主页</a></li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/projects"><i class="material-icons">description</i>Github - 项目</a></li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">sort</i>Categories - 目录</a></li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/tags"><i class="material-icons">label</i>Tags - 标签</a></li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/feed.xml" target="_blank"><i class="material-icons">rss_feed</i>RSS - 订阅</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">person</i>About - 关于我</a></li>
+            <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">email</i>Contact - 联系我</a></li>
+            <li>
+                <a class="waves-effect" href="javascript:void(0)"><img src="{{site.baseurl}}/assets/res/wechat-slide.png"
+                        style="margin:12px 32px 0 0">WeChat - 微信公众号</a>
+                <img src="{{site.baseurl}}/assets/res/knight.png" alt="微信公众号搜索：程序骑士" width="80%" title="微信公众号搜索：程序骑士"
+                    style="margin-left:10%">
+            </li>
+        </ul>
+    </header>
+    <main>

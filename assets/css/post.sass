@@ -1,0 +1,98 @@
+---
+---
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+main
+  strong
+    font-weight: bold
+
+  div
+    .divider
+      margin: 10px 0
+
+    p
+      font-size: 16px
+      img
+        max-width: 70%
+        margin-left: 15%
+
+    &.highlighter-rouge
+      margin: 1em 20px
+
+      pre
+        padding: 5px
+
+    .knight
+      text-align: center
+      
+    .knight
+      p
+        font-size: 20px
+        font-weight: bold
+        line-height: 10px
+      img
+        width: 250px
+
+      div
+        img
+          width: 24px
+          margin-right: 10px
+        
+  figure
+    &.highlight
+      margin: 1em 20px
+
+      pre
+        white-space: pre-wrap
+
+      table
+        width: auto
+
+#post-info
+  h4
+    font-weight: bold
+    margin-bottom: 15px
+
+  ul
+    &:not(.browser-default)
+      padding-left: 0
+      width: 40%
+
+      li
+        list-style-type: none
+
+  span
+    font-size: 14px
+    display: block
+    margin-bottom: 5px
+
+    i
+      font-size: 11.5px
+      margin-right: 10px
+
+      &#indicate
+        font-size: 20px
+
+    .chip
+      color: #616161
+      margin-right: 5px
+
+      &:hover
+        color: #fff
+        background-color: #616161
+
+      @include transition(all .3s ease-in-out)
+
+@media only screen and (max-width: 992px)
+  #post-info
+    h4
+      text-align: center
+
+    ul
+      &:not(.browser-default)
+        width: 100%
